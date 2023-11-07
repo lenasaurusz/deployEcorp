@@ -8,6 +8,7 @@ app.use(express.json());
 app.listen(PORT, () => {
   console.log(`Server runnig at port ${PORT}`);
 });
+app.get('/', (req,res)=>res.send('hola'))
 app.use('/eco', express.static(__dirname + '/front-end'));
 
 app.get('/eco', function (req, res) {
